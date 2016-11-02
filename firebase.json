@@ -1,0 +1,20 @@
+{
+  "hosting": {
+    "public": "public",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [{
+    	"source": "public/bundle.js",
+    	"headers": [{
+    		"key": "Access-Control-Allow-Origin",
+    		"value": "*"
+    	}]
+    }],
+    "trailingSlash": false,
+    "cleanUrls": true
+  }
+}

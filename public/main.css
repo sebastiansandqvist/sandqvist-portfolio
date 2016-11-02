@@ -1,0 +1,237 @@
+body {
+	background: #fafafa;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+}
+
+/* ---------------------- LAYOUT ---------------------- */
+
+.Display {
+	background: #5a5;
+	padding: 50px;
+}
+
+.Container {
+	margin: 0 auto;
+	width: 860px;
+}
+
+.Content {
+	margin: 50px auto;
+}
+
+.Section {
+	margin-bottom: 40px
+}
+
+.drop20 {
+	margin-top: 20px;
+}
+
+.right {
+	float: right;
+}
+
+ul {
+	margin: 0;
+}
+
+/* ---------------------- DEMO ---------------------- */
+
+.Demo {
+	overflow: hidden
+}
+
+.Demo-left {
+	float: left;
+	width: 560px;
+}
+
+.Demo-right {
+	box-sizing: border-box;
+	float: left;
+	padding-left: 20px;
+	width: 300px;
+}
+
+.Demo-result {
+	background: #fff;
+	border: 1px solid #f5f5f5;
+	padding: 10px;
+	margin-top: 20px;
+}
+
+/* ---------------------- NAVIGATION ---------------------- */
+
+.Nav {
+	background: #6b6;
+	padding: 20px;
+	text-align: center;
+}
+
+.Nav-link {
+	color: #fff;
+	font-weight: 400;
+	margin: 0 15px;
+	opacity: 0.8;
+	text-decoration: none;
+}
+
+.Nav-link.active {
+	border-bottom: 1px solid #8d8;
+	opacity: 1;
+}
+
+/* ---------------------- TABS ---------------------- */
+
+.Tabs {
+	background: #2c3e50;
+}
+
+.TabBar {
+	background: #3a536c;
+	overflow: hidden;
+}
+
+.Tab {
+	color: white;
+	cursor: pointer;
+	float: left;
+	padding: 10px 25px;
+}
+
+.Tab.active {
+	background: #2c3e50;
+	cursor: default;
+}
+
+.TabContent {
+	color: #fff;
+	padding: 10px 20px;
+}
+
+.FiddleLink {
+	background: #6b6;
+	color: #fff;
+	font-size: 12px;
+	cursor: pointer;
+	float: right;
+	margin: 10px 10px 0 0;
+	padding: 2px 10px;
+	text-decoration: none;
+}
+
+.FiddleLink::after {
+	background: url(images/jsfiddle-logo.png);
+	background-size: 100% 100%;
+	content: '';
+	display: inline-block;
+	height: 10px;
+	margin-left:5px;
+	width: 15px;
+}
+
+/* ---------------------- TOOLTIP ---------------------- */
+
+.Tooltip-wrap {
+	display: inline-block;
+	position: relative;
+	transform: translateZ(0);
+}
+
+.Tooltip-wrap:hover .Tooltip {
+		opacity: 1;
+		transform: translateX(-50%) translateY(5px);
+		transition: all .3s ease .5s;
+		visibility: visible;
+}
+
+.Tooltip {
+	background: rgba(0, 0, 0, .8);
+	border-radius: 2px;
+	bottom: -30px;
+	color: white;
+	font-size: 12px;
+	left: 50%;
+	opacity: 0;
+	padding: 5px 10px;
+	position: absolute;
+	transition: all .2s ease;
+	transform: translateX(-50%) translateY(0);
+	user-select: none;
+	visibility: hidden;
+	white-space: nowrap;
+}
+
+
+/* ---------------------- TYPOGRAPHY ---------------------- */
+
+h1 {
+	color: #fff;
+	font-weight: 300;
+	font-size: 24;
+	margin: 0;
+	text-align: center;
+}
+
+h2 {
+	color: #34495e;
+	font-size: 20px;
+	font-weight: 600;
+	margin: 0 0 10px 0;
+}
+
+h3 {
+	color: #34495e;
+	font-size: 18px;
+	font-weight: 400;
+	margin: 0;
+}
+
+p {
+	color: #34495e;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 0;
+	padding: 10px 0 0 0;
+}
+
+pre {
+	tab-size: 2;
+}
+
+code {
+	color: white;
+	font-family: 'Monaco', monospace;
+	font-size: 13px;
+}
+
+code.inline {
+	background: #eee;
+	color: #34495e;
+	padding: 0 5px;
+}
+
+.property,
+.keyword {
+	color: #93ddf5;
+}
+
+.number,
+.boolean {
+	color: #ae81ff;
+}
+
+.selector,
+.string {
+	color: #a7e040;
+}
+
+.operator,
+.punctuation {
+	color: #c1e0ff;
+}
+
+.comment {
+	color: #7d9bb9;
+}
