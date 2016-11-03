@@ -1567,12 +1567,25 @@ var Page = {
 	view: view$1
 };
 
+// import T from 's-types';
 function view() {
 	return (
 		index$1(Page, { active: 'photography' },
 			index$1('.Section',
 				index$1('img.Photo[src=/images/photos/tomato.jpg]'),
-				index$1('img.Photo[src=/images/photos/mountains.jpg]')
+				index$1('img.Photo[src=/images/photos/mountains.jpg]'),
+				index$1('img.Photo[src=/images/photos/dante.jpg]'),
+				index$1('img.Photo[src=/images/photos/humanscape.jpg]'),
+				index$1('img.Photo[src=/images/photos/vegas.jpg]'),
+				index$1('img.Photo[src=/images/photos/waterlight.jpg]'),
+				index$1('img.Photo[src=/images/photos/whitespace.jpg]'),
+				index$1('img.Photo[src=/images/photos/winter.jpg]'),
+				index$1('img.Photo[src=/images/photos/buddha.jpg]'),
+				index$1('img.Photo[src=/images/photos/eyes.jpg]'),
+				index$1('img.Photo[src=/images/photos/pattern.jpg]'),
+				index$1('img.Photo[src=/images/photos/blue.jpg]'),
+				index$1('img.Photo[src=/images/photos/me.jpg]'),
+				index$1('img.Photo[src=/images/photos/dream.jpg]')
 			)
 		)
 	);
