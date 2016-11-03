@@ -1,46 +1,28 @@
 import m from 'mithril';
 import T from 's-types';
 
-const pages = [
-	'Getting started',
-	'Components',
-	'Requests',
-	'Applications',
-	'Routing'
-	// 'Streams'
-];
+const activeClass = (a, b) => a === b ? 'active' : '';
 
-const Link = {
-	view({ attrs }) {
-
-		if (window.__DEV__) {
-			T({
-				page: T.string,
-				active: T.string
-			})(attrs, 'Link');
-		}
-
-		return (
-			m('a.Nav-link', {
-				href: `/${attrs.page.replace(' ', '').toLowerCase()}`,
-				oncreate: m.route.link,
-				className: attrs.active === attrs.page ? 'active' : ''
-			}, attrs.page)
-		);
-	}
-};
+const navType = T({
+	active: T.string
+});
 
 function view({ attrs }) {
 
 	if (window.__DEV__) {
-		T({ active: T.string })(attrs, 'Nav');
+		navType(attrs, 'Nav');
 	}
 
 	return (
-		m('.Nav',
-			m('.Container',
-				pages.map((page) => m(Link, { page, active: attrs.active }))
-			)
+		m('nav.Nav',
+			m('a.Nav-link[href=/photography]', {
+				className: activeClass('photography', attrs.active),
+				oncreate: m.route.link
+			}, 'Photography'),
+			m('a.Nav-link[href=/web]', {
+				className: activeClass('web', attrs.active),
+				oncreate: m.route.link
+			}, 'Web design')
 		)
 	);
 }

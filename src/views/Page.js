@@ -1,24 +1,16 @@
 import m from 'mithril';
-import T from 's-types';
 import Nav from './Nav.js';
 
 function view({ attrs, children }) {
-
-	if (window.__DEV__) {
-		T({ id: T.string })(attrs, 'Page');
-	}
-
 	return (
 		m('div',
-			m('.Display',
-				m('.Container',
-					m('h1', 'Mithril.js examples')
-				)
+			m('.Header',
+				m('h1.Header-text', 'Sebastian Sandqvist'),
+				m('.logo.logo-left'),
+				m('.logo.logo-right')
 			),
-			m(Nav, { active: attrs.id }),
-			m('.Content',
-				m('.Container', children)
-			)
+			m(Nav, attrs),
+			m('div', children)
 		)
 	);
 }

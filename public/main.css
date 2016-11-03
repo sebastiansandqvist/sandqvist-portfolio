@@ -1,237 +1,158 @@
 body {
-	background: #fafafa;
+	background: #000;
+	color: #fff;
 	font-family: 'Open Sans', sans-serif;
 	margin: 0;
 }
 
 /* ---------------------- LAYOUT ---------------------- */
 
-.Display {
-	background: #5a5;
-	padding: 50px;
+.Header {
+	background: url('/images/background.png');
+	background-size: 100% 100%;
+	height: 225px;
+	width: 100%;
 }
 
-.Container {
-	margin: 0 auto;
-	width: 860px;
-}
-
-.Content {
-	margin: 50px auto;
-}
-
-.Section {
-	margin-bottom: 40px
-}
-
-.drop20 {
-	margin-top: 20px;
-}
-
-.right {
-	float: right;
-}
-
-ul {
-	margin: 0;
-}
-
-/* ---------------------- DEMO ---------------------- */
-
-.Demo {
-	overflow: hidden
-}
-
-.Demo-left {
-	float: left;
-	width: 560px;
-}
-
-.Demo-right {
-	box-sizing: border-box;
-	float: left;
-	padding-left: 20px;
-	width: 300px;
-}
-
-.Demo-result {
-	background: #fff;
-	border: 1px solid #f5f5f5;
-	padding: 10px;
-	margin-top: 20px;
-}
-
-/* ---------------------- NAVIGATION ---------------------- */
-
-.Nav {
-	background: #6b6;
-	padding: 20px;
+.Header-text {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 15px;
 	text-align: center;
 }
 
-.Nav-link {
-	color: #fff;
-	font-weight: 400;
-	margin: 0 15px;
-	opacity: 0.8;
+.Section {
+	margin: 60px auto;
+	max-width: 1040px;
+	text-align: center;
+}
+
+/* ---------------------- LOGO ---------------------- */
+
+.logo {
+	height: 225px;
+	width: 250px;
+}
+
+.logo-left {
+	background: url('/images/logo-left.png');
+	background-size: 100% 100%;
+	float: left;
+}
+
+.logo-right {
+	background: url('/images/logo-right.png');
+	background-size: 100% 100%;
+	float: right;
+}
+
+@media screen and (max-width: 860px) {
+	.logo-left,
+	.logo-right {
+		display: none;
+	}
+}
+
+/* ---------------------- ELEMENTS ---------------------- */
+
+.Button {
+	border: 1px solid #333;
+	border-radius: 3px;
+	color: #ccc;
+	display: block;
+	font-size: 13px;
+	font-weight: 300;
+	letter-spacing: 4px;
+	margin: 0 auto 20px auto;
+	padding: 20px;
 	text-decoration: none;
+	text-transform: uppercase;
+	width: 400px;
+}
+
+.Button:hover {
+	border: 1px solid #555;
+}
+
+
+/* ---------------------- NAV ---------------------- */
+
+.Nav {
+	left: 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 180px;
+}
+
+.Nav-link {
+	color: #ccc;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: 300;
+	letter-spacing: 4px;
+	padding: 10px;
+	margin: 0 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 160px;
 }
 
 .Nav-link.active {
-	border-bottom: 1px solid #8d8;
-	opacity: 1;
-}
-
-/* ---------------------- TABS ---------------------- */
-
-.Tabs {
-	background: #2c3e50;
-}
-
-.TabBar {
-	background: #3a536c;
-	overflow: hidden;
-}
-
-.Tab {
-	color: white;
-	cursor: pointer;
-	float: left;
-	padding: 10px 25px;
-}
-
-.Tab.active {
-	background: #2c3e50;
-	cursor: default;
-}
-
-.TabContent {
 	color: #fff;
-	padding: 10px 20px;
+	font-weight: 400;
 }
 
-.FiddleLink {
-	background: #6b6;
-	color: #fff;
-	font-size: 12px;
-	cursor: pointer;
-	float: right;
-	margin: 10px 10px 0 0;
-	padding: 2px 10px;
-	text-decoration: none;
-}
-
-.FiddleLink::after {
-	background: url(images/jsfiddle-logo.png);
-	background-size: 100% 100%;
+.Nav-link.active::after {
+	background: #fff;
+	border-radius: 50%;
 	content: '';
-	display: inline-block;
-	height: 10px;
-	margin-left:5px;
-	width: 15px;
+	display: block;
+	height: 4px;
+	margin: 8px auto;
+	width: 4px;
 }
 
-/* ---------------------- TOOLTIP ---------------------- */
+/* ---------------------- PORTFOLIO ---------------------- */
 
-.Tooltip-wrap {
-	display: inline-block;
-	position: relative;
-	transform: translateZ(0);
+.Photo {
+	border: 20px solid #fff;
+	box-sizing: border-box;
+	display: block;
+	margin-bottom: 80px;
+	max-width: 100%;
 }
 
-.Tooltip-wrap:hover .Tooltip {
-		opacity: 1;
-		transform: translateX(-50%) translateY(5px);
-		transition: all .3s ease .5s;
-		visibility: visible;
+.Web {
+	border: 20px solid #fff;
+	box-sizing: border-box;
+	display: block;
+	margin: 40px auto;
+	max-width: 100%;
 }
-
-.Tooltip {
-	background: rgba(0, 0, 0, .8);
-	border-radius: 2px;
-	bottom: -30px;
-	color: white;
-	font-size: 12px;
-	left: 50%;
-	opacity: 0;
-	padding: 5px 10px;
-	position: absolute;
-	transition: all .2s ease;
-	transform: translateX(-50%) translateY(0);
-	user-select: none;
-	visibility: hidden;
-	white-space: nowrap;
-}
-
 
 /* ---------------------- TYPOGRAPHY ---------------------- */
 
 h1 {
-	color: #fff;
+	color: #000;
 	font-weight: 300;
-	font-size: 24;
-	margin: 0;
-	text-align: center;
-}
-
-h2 {
-	color: #34495e;
-	font-size: 20px;
-	font-weight: 600;
-	margin: 0 0 10px 0;
-}
-
-h3 {
-	color: #34495e;
-	font-size: 18px;
-	font-weight: 400;
-	margin: 0;
+	font-size: 30px;
 }
 
 p {
-	color: #34495e;
-	font-size: 16px;
-	font-weight: 400;
-	margin: 0;
-	padding: 10px 0 0 0;
+	font-size: 15px;
+	margin: 10px 0;
 }
 
-pre {
-	tab-size: 2;
-}
-
-code {
-	color: white;
-	font-family: 'Monaco', monospace;
+.details {
+	color: #aaa;
 	font-size: 13px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	/*text-transform: uppercase;*/
 }
 
-code.inline {
-	background: #eee;
-	color: #34495e;
-	padding: 0 5px;
-}
-
-.property,
-.keyword {
-	color: #93ddf5;
-}
-
-.number,
-.boolean {
-	color: #ae81ff;
-}
-
-.selector,
-.string {
-	color: #a7e040;
-}
-
-.operator,
-.punctuation {
-	color: #c1e0ff;
-}
-
-.comment {
-	color: #7d9bb9;
+.white {
+	color: #fff;
 }
